@@ -13,5 +13,7 @@ export default function Home() {
     <p><Link href='/task6'>task6</Link></p>
     <p><Link href='/task7'>task7</Link></p>
     <p><Link href='/task8'>task8</Link></p>
+    <p><Link href='/task9'>task9</Link></p>
+    <p><Link href='/task10'>task10</Link></p>
   </>
 }

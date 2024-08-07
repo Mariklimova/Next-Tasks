@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import style from './style.module.css'
+
 
 export default function Task3() {
 
@@ -14,13 +14,12 @@ export default function Task3() {
         <p>3. Создайте форму для ввода данных. По клику на кнопку получите данные из input
             и отобразите в консоль</p>
 
-        <div className={style.form}>
-            <input type="text" placeholder="введите данные" onChange={getInput} />
+        <div>
 
+            <input type="text" placeholder="введите данные" onChange={(event) => setStr(event.target.value)} />
 
-            <button onClick={checkData}>Click</button>
+            <button onClick={() => console.log(str)}>Click</button>
 
-            <p></p>
         </div>
 
         <p><Link href='/'>home</Link></p>

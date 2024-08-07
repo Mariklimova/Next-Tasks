@@ -1,12 +1,20 @@
 'use client'
-
+import axios from 'axios';
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Task2() {
+export default function Task8() {
 
     const [data, setData] = useState('');
-    
+
+    const getIp = async () => {
+        const response = await axios.get('https://api.ipify.org/?format=json');
+        setData(response.data.ip)
+    }
+
+    useEffect(() => {
+        getIp()
+    }, []);
 
     return <>
         <p>8. Создайте компонент, который выполняет запрос к API
@@ -14,13 +22,8 @@ export default function Task2() {
             (решить задачу через клиентский компонент)
         </p>
 
+        <p>{data}</p>
 
-        <div>
-            <button onClick={() => setFlag(true)}>Show text</button>
-            <button onClick={() => setFlag(false)}>Hide text</button>
-
-            <p>{data}</p>
-        </div>
 
         <p><Link href='/'>home</Link></p>
 

@@ -4,8 +4,6 @@ import Link from "next/link";
 
 export default function Task2() {
 
- 
-
     return <>
         <p>5. Создайте массив данных, представляющий элементы, которые вы хотите
             отобразить в списке используя map. ["New York", "London", "Tokyo", "Paris", "Berlin"].
